@@ -62,7 +62,7 @@ class KlaviyoAPI {
         $this->guzzle_options = $guzzle_options;
 
         $this->config = clone Configuration::getDefaultConfiguration();
-        $this->config->setApiKey('Authorization',"Klaviyo-API-Key $this->api_key");
+        $this->config->setApiKey('Authorization',"Bearer $this->api_key");
 
         
         $this->Accounts = new Subclient(
