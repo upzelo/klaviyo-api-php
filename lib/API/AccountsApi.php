@@ -478,7 +478,7 @@ class AccountsApi
             $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
         }
 
-        $defaultHeaders['revision'] = ['2023-12-15'];
+        $defaultHeaders['revision'] = [$this->config->getRevision()];
 
         $headers = array_merge(
             $defaultHeaders,
@@ -838,7 +838,7 @@ class AccountsApi
             $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
         }
 
-        $defaultHeaders['revision'] = ['2023-12-15'];
+        $defaultHeaders['revision'] = [$this->config->getRevision()];
 
         $headers = array_merge(
             $defaultHeaders,

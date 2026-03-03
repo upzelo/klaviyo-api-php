@@ -104,6 +104,13 @@ class Configuration
     protected $userAgent = 'klaviyo/api/6.1.0';
 
     /**
+     * API revision header value
+     *
+     * @var string
+     */
+    protected $revision = '2023-12-15';
+
+    /**
      * Debug switch (default set to false)
      *
      * @var bool
@@ -326,6 +333,29 @@ class Configuration
     public function getUserAgent()
     {
         return $this->userAgent;
+    }
+
+    /**
+     * Sets the revision header value
+     *
+     * @param string $revision API revision string (e.g. 2024-10-15)
+     *
+     * @return $this
+     */
+    public function setRevision($revision)
+    {
+        $this->revision = $revision;
+        return $this;
+    }
+
+    /**
+     * Gets the revision header value
+     *
+     * @return string
+     */
+    public function getRevision()
+    {
+        return $this->revision;
     }
 
     /**
